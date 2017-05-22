@@ -13,4 +13,5 @@ public class Stingray extends Predators
 	{
 		return height;
 	}
+	public void dummy() {}
 }

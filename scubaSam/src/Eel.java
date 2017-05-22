@@ -13,4 +13,6 @@ public class Eel extends Predators
 	{
 		return height;
 	}
+	
+	public void dummy() {}
 }

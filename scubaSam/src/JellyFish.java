@@ -40,4 +40,5 @@ public class JellyFish extends Predators
 		else 
 			return true;
 	}
+	public void dummy() {}
 }

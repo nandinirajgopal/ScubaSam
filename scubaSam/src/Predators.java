@@ -37,4 +37,5 @@ public class Predators
 			return true;
 			
 	}
+	public void dummy() {}
 }
