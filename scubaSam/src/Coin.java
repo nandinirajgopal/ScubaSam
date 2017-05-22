@@ -1,6 +1,4 @@
 import java.awt.Point;
-
-
 public class Coin implements Rewards
 {
 	private double x;
@@ -23,7 +21,7 @@ public class Coin implements Rewards
 		return current;
 	}
 
-	public Point getLocation()
+	public Point getLoc()
 	{
 		return loc.getLocation();
 	}
