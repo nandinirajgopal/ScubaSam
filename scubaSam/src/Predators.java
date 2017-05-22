@@ -35,7 +35,11 @@ public class Predators
 			return false;
 		else 
 			return true;
-			
+	}
+	
+	public double getHeight()
+	{
+		return 0;
 	}
 	public void dummy() {}
 }
