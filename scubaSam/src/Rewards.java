@@ -6,4 +6,5 @@ public interface Rewards
 	public Point getLoc();
 	public boolean canMove();
 	public int getValue();
+	//public void dummy();
 }
