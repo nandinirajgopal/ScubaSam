@@ -33,12 +33,11 @@ public class JellyFish extends Predators
 	{
 		if( x == 1)
 			return false; // when false is returned in game class check if direction needs to be changed;
-		else if(dir < 0 && y < 61)
+		else if(dir < 0 && y > 969)
 			return false;
-		else if(dir > 0 && y > 969)
+		else if(dir > 0 && y < 31)
 			return false;
 		else 
 			return true;
 	}
-	public void dummy() {}
 }
