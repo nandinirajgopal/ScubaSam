@@ -6,7 +6,7 @@ public class Eel extends Predators
 	public Eel(double locX, double locY, int spd)
 	{
 		super(locX, locY, spd);
-		height = 30;
+		height = 100;
 	}
 
 	public double getHeight()

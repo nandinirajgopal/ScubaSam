@@ -6,7 +6,7 @@ public class Stingray extends Predators
 	public Stingray(double locX, double locY, int spd)
 	{
 		super(locX, locY, spd); // locY should always be at bottom
-		height = 30;
+		height = 50;
 	}
 	
 	public double getHeight()
