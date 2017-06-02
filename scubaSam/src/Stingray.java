@@ -1,17 +1,27 @@
 import java.awt.Point;
+import java.awt.Image;
+import javax.swing.*;
 public class Stingray extends Predators
 {
-	private double height;
-
-	public Stingray(double locX, double locY, int spd)
+	private int height;
+	private int width;
+ 
+	public Stingray(double locX, double locY, JarPictLoader loader, int whichImage)
 	{
-		super(locX, locY, spd); // locY should always be at bottom
+		super(locX, locY, loader,  whichImage); // locY should always be at bottom
 		height = 50;
 	}
 	
-	public double getHeight()
+	public int getHeight()
 	{
-		return height;
+		return height/2;
 	}
-	public void dummy() {}
+	
+	public int getWidth()
+	{
+		return width/2;
+	}
 }
+ 
+ 
+ 

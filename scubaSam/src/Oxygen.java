@@ -1,31 +1,22 @@
+ import java.awt.Image;
+import javax.swing.*;
 import java.awt.Point;
-public class Oxygen implements Rewards 
+public class Oxygen extends Rewards 
 {
-	private double x;
-	private double y;
-	private Point loc;
-	public Oxygen(double locX, double locY)
+	private int height = 30;
+	public Oxygen(double locX, double locY, JarPictLoader loader, int whichImage)
 	{
-		x = locX;
-		y = locY;
-		loc.setLocation(locX, locY);
+		super(locX, locY, loader, whichImage);
+		loc = new Point((int) locX, (int)locY);
 	}
-
-	public Point move() 
-	{
-		Point current;
-		current = loc.getLocation();
-		double x = current.getX();
-		x++;
-		current.setLocation(x,y);
-		return current;
-	}
-
+ 
+ 
+ 
 	public Point getLoc() 
 	{
 		return loc.getLocation();
 	}
-
+ 
 	public boolean canMove() 
 	{
 		if(x == 1)
@@ -33,10 +24,27 @@ public class Oxygen implements Rewards
 		else
 			return true;
 	}
-
+ 
 	public int getValue() 
 	{
 		return 100;
 	}
-
+	
+	public int getHeight()
+	{
+		return height;
+	}
+ 
+ 
 }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

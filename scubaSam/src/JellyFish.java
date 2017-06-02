@@ -1,43 +1,83 @@
 import java.awt.Point;
+import java.awt.Image; 
+import javax.swing.*;
 public class JellyFish extends Predators 
 {
-	private double x;
-	private double y;
-	private double height;
-	private Point loc;
-	private int speed;
+	
+	private int height;
+	private int width;
+	
 	private int dir;
-	public JellyFish(double locX, double locY, int spd, int d)
+	/*public JellyFish(double locX, double locY)
 	{
-		super(locX, locY, spd);
-		dir = d; // should be randomly generated pos or neg
+		super(locX,locY);
+	}
+	*/
+	public JellyFish(double locX, double locY, int d, JarPictLoader loader, int whichImage)
+	{
+		super(locX,locY, loader,  whichImage);
+		dir = d;
 		height = 60;
+		width = 49;
 	}
 	
-	public Point move(int speed)
+	public Point move()
 	{
-		Point current;
-		current = loc.getLocation();
-		double x = current.getX();
-		x += speed;
-		if(y > 0)
+		if(canMove())
 		{
-			y += speed/2; // y direction speed is half of x directino speed
+			Point current;
+			current = loc.getLocation();
+			double x = current.getX();
+			x-=10;
+			if(dir > 0)
+			{
+				y += 10;
+			}
+			if (dir < 0)
+			{
+				y -= 10;
+			}
+			current.setLocation(x,y);
+			loc = current;
+			return current;
 		}
-		if(y < 0)
-			y -= speed/2;
-		current.setLocation(x,y);
-		return current;
+		else
+			return null;
 	}
 	public boolean canMove()
 	{
-		if( x == 1)
+		if( x < 0)
 			return false; // when false is returned in game class check if direction needs to be changed;
-		else if(dir < 0 && y > 969)
-			return false;
-		else if(dir > 0 && y < 31)
-			return false;
+		else if(dir > 0 && y > 970)
+			{
+			dir = -1;
+			return true;
+}
+		else if(dir < 0 && y < 31)
+{
+			dir = 1;
+			return true;
+}
 		else 
 			return true;
 	}
+public int getHeight()
+{
+	return height/2;
+} 
+ 
+public int getWidth()
+{
+	return width/2;
 }
+ 
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

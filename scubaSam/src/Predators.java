@@ -1,16 +1,12 @@
 import java.awt.Point;
-public class Predators
+import java.awt.Image;
+import javax.swing.*;
+ 
+public class Predators extends Rewards
 {
-	private double x;
-	private double y;
-	private Point loc;
-	private int speed;
-	public Predators(double locX, double locY, int spd)
+	public Predators(double locX, double locY, JarPictLoader loader, int whichImage)
 	{
-		x = locX; // always max x value
-		y = locY; // random y value > 30
-		speed = spd;
-		loc.setLocation(locX,locY);
+		super(locX, locY, loader, whichImage);
 	}
 	
 	public Point move()
@@ -18,7 +14,7 @@ public class Predators
 		Point current;
 		current = loc.getLocation();
 		double x = current.getX();
-		x += speed;
+		x-=10;
 		current.setLocation(x,y);
 		loc = current;
 		return current;
@@ -37,9 +33,11 @@ public class Predators
 			return true;
 	}
 	
-	public double getHeight()
+	public int getHeight()
 	{
 		return 0;
 	}
-	public void dummy() {}
+ 
 }
+ 
+ 

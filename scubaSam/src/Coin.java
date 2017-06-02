@@ -1,17 +1,15 @@
+ 
 import java.awt.Point;
-public class Coin implements Rewards
+public class Coin extends Rewards
 {
-	private double x;
-	private double y;
-	private Point loc;
-	public Coin(double locX, double locY)
+	private int height = 25;
+	public Coin(double locX, double locY, JarPictLoader loader, int whichImage)
 	{
-		x = locX;
-		y = locY;
-		loc.setLocation(locX, locY);
+		super(locX, locY, loader,  whichImage);
+		loc = new Point ((int)locX, (int)locY);
 	}
-
-	public Point move()
+ 
+	/*public Point move()
 	{
 		Point current;
 		current = loc.getLocation();
@@ -19,13 +17,13 @@ public class Coin implements Rewards
 		x++;
 		current.setLocation(x,y);
 		return current;
-	}
-
+	}*/
+ 
 	public Point getLoc()
 	{
 		return loc.getLocation();
 	}
-
+ 
 	public boolean canMove() 
 	{
 		if(x == 1)
@@ -33,10 +31,17 @@ public class Coin implements Rewards
 		else
 			return true;
 	}
-
+ 
 	public int getValue()
 	{
 		return 5;
 	}
-
+	
+	public int getHeight()
+	{
+		return height;
+	}
 }
+ 
+ 
+ 
